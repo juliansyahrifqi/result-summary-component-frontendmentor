@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "light-red": "hsl(0, 100%, 67%)",
+              "light-red-card": "hsla(0, 100%, 67%, 8%)",
+              "orange-yellow": "hsl(39, 100%, 56%)",
+              "orange-yellow-card": "hsla(39, 100%, 56%, 8%)",
+              "green-teal": "hsl(166, 100%, 37%)",
+              "green-teal-card": "hsla(166, 100%, 37%, 8%)",
+              "cobalt-blue": "hsl(234, 85%, 45%)",
+              "cobalt-blue-card": "hsla(234, 85%, 45%, 8%)",
+              white: "hsl(0, 0%, 100%)",
+              "pale-blue": "hsl(221, 100%, 96%)",
+              "light-lavender": "hsl(241, 100%, 89%)",
+              "dark-gray-blue": "hsl(224, 30%, 27%)",
+              "light-slate-blue": "hsl(252, 100%, 67%)",
+              "light-royal-blue": "hsl(241, 81%, 54%)",
+              "violet-blue": "hsla(256, 72%, 46%, 1)",
+              "persian-blue": "hsla(241, 72%, 46%, 0)",
+            },
+          },
+          fontFamily: {
+            hanken: "Hanken Grotesk, sans-serif",
+          },
+        },
+      };
+    </script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="h-screen flex justify-center items-center flex-col font-hanken">
+    <main
+      class="grid md:grid-cols-2 md:shadow-2xl md:shadow-pale-blue rounded-[40px] md:w-1/2"
+    >
+      <section
+        id="result"
+        class="py-14 px-10 text-center rounded-[40px] bg-gradient-to-b from-light-slate-blue to-light-royal-blue"
+      >
+        <p class="text-xl font-medium text-light-lavender">Your Result</p>
+
+        <div
+          class="bg-gradient-to-b from-violet-blue to-persian-blue rounded-full mt-5 p-4 w-[55%] h-[55%] md:w-[75%] mx-auto"
+        >
+          <h1 class="text-6xl font-bold text-white mt-2 md:mt-8">76</h1>
+          <p class="text-md mt-3 text-light-lavender font-medium">of 100</p>
+        </div>
+
+        <div class="mt-4">
+          <p class="font-medium text-2xl text-white">Great</p>
+          <p class="mt-2 text-light-lavender font-medium md:px-8">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
+
+      <section class="p-6 md:p-10">
+        <h2 class="font-bold text-md md:text-2xl">Summary</h2>
+
+        <div
+          class="rounded-lg mt-4 md:mt-6 flex items-center justify-between gap-2 bg-light-red-card p-4"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icon-reaction.svg" alt="Reaction-icon" />
+            <p class="text-light-red font-medium">Reaction</p>
+          </div>
+
+          <div class="flex items-center">
+            <p class="text-md font-bold">
+              80 <span class="text-slate-400">/ 100</span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg mt-4 flex items-center justify-between gap-2 bg-orange-yellow-card p-4"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icon-memory.svg" alt="Memory-icon" />
+            <p class="text-orange-yellow font-medium">Memory</p>
+          </div>
+
+          <div class="flex items-center">
+            <p class="text-md font-bold">
+              92 <span class="text-slate-400">/ 100</span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg mt-4 flex items-center justify-between gap-2 bg-green-teal-card p-4"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icon-verbal.svg" alt="Verbal-icon" />
+            <p class="text-green-teal font-medium">Verbal</p>
+          </div>
+
+          <div class="flex items-center">
+            <p class="text-md font-bold">
+              61 <span class="text-slate-400">/ 100</span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg mt-4 flex items-center justify-between gap-2 bg-cobalt-blue-card p-4"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icon-visual.svg" alt="Verbal-icon" />
+            <p class="text-cobalt-blue font-medium">Visual</p>
+          </div>
+
+          <div class="flex items-center">
+            <p class="text-md font-bold">
+              72 <span class="text-slate-400">/ 100</span>
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="bg-dark-gray-blue w-full mt-5 md:mt-10 text-white p-4 md:p-3 rounded-full font-bold hover:bg-gradient-to-b from-light-slate-blue to-light-royal-blue hover:ease-in"
+        >
+          Continue
+        </button>
+      </section>
+    </main>
+    <div class="attribution mt-5">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.rifqipratamaj.me/">Rifqi Pratama Juliansyah</a>.
+    </div>
+  </body>
+</html>
